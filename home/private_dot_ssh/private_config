@@ -1,0 +1,6 @@
+LogLevel quiet
+XAuthLocation /usr/bin/xauth
+ForwardAgent yes
+HashKnownHosts no
+ForwardX11 yes
+User stodolas

@@ -1,0 +1,44 @@
+[user]
+  name = Steve Stodola
+  email = stodola@plytro.com
+[color]
+  branch = auto
+  status = auto
+  diff = auto
+        ui = true
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    root = !pwd
+
+    d = "!sh -c \"git diff $1\" -"
+[push]
+  default = current
+[branch]
+        autosetuprebase = always
+[color "diff-highlight"]
+        oldNormal = red bold
+        oldHighlight = red bold 52
+        newNormal = green bold
+        newHighlight = green bold 22
+[core]
+	eol = lf
+	autocrlf = false
+#        pager = diff-so-fancy | less --tabs=4 -RFX
+[diff-so-fancy]
+        stripLeadingSymbols = false
+
+[diff "ansible-vault"]
+        textconv = ansible-vault view
+[pull]
+        rebase = false
+[init]
+	defaultBranch = main
+
