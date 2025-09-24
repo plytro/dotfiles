@@ -13,7 +13,7 @@ pre-commit init-templatedir ~/.git-template
 
 # install krew plugins
 for plugin in $(awk '{print $1}' ~/.krew-installs); do
-  kubectl krew install $plugin
+  krew install $plugin
 done
 
 mkdir -p ~/tmp
