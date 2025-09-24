@@ -4,7 +4,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /tmp/ init --apply --verbose plytro/d
 
 # mise
 curl https://mise.run | sh
-echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+eval "$(~/.local/bin/mise activate bash)"
 mise install
 
 # configure pre-commit on clones
