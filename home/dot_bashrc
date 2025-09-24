@@ -39,7 +39,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/bin:${PATH}"
 
-echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+eval "$(/home/sstodola/.local/bin/mise activate bash)"
 source <(kubectl completion bash)
 source <(helm completion bash)
 source <(gh completion -s bash)
