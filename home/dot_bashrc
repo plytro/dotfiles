@@ -39,14 +39,12 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/bin:${PATH}"
 
-ASDF_FORCE_PREPEND=yes
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 source <(kubectl completion bash)
-source <(flux completion bash)
 source <(helm completion bash)
-source <(glab completion)
-complete -C "$HOME/.asdf/shims/aws_completer" aws
+source <(gh completion -s bash)
+source <(glab completion -s bash)
+complete -C "$(which aws_completer)" aws
 
 which bat 2>&1 > /dev/null && alias cat="bat -pp "
 
