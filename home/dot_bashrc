@@ -32,6 +32,7 @@ PURPLE='\[\033[1;35m\]'
 CYAN='\[\033[0;36m\]'
 NC='\[\033[0m\]' # No Color
 
+alias ls='ls --color=auto'
 alias ll="ls -la --color=auto"
 ulimit -S -c 0
 
