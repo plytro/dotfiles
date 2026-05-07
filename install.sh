@@ -2,8 +2,6 @@
 
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /tmp/ init --apply --verbose plytro/dotfiles
 
-sudo apt install libatomic1 || ;
-
 # mise
 curl https://mise.run | sh
 eval "$(~/.local/bin/mise activate bash)"
