@@ -12,9 +12,7 @@ git config --global init.templateDir ~/.git-template
 pre-commit init-templatedir ~/.git-template
 
 # install krew plugins
-for plugin in $(awk '{print $1}' ~/.krew-installs); do
-  krew install $plugin
-done
+kubectl krew install < ~/.krew-installs
 
 mkdir -p ~/tmp
 mkdir -p ~/bin
