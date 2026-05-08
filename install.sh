@@ -1,6 +1,4 @@
 #!/bin/bash
-set -x
-
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /tmp/ init --apply --verbose plytro/dotfiles
 
 # mise
