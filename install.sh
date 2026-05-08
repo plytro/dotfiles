@@ -10,10 +10,12 @@ mise install
 
 # configure pre-commit on clones
 git config --global init.templateDir ~/.git-template
+eval "$(~/.local/bin/mise activate bash)"
+
 pre-commit init-templatedir ~/.git-template
 
 # install krew plugins
-kubectl krew install < ~/.krew-installs
+krew install < ~/.krew-installs
 
 mkdir -p ~/tmp
 mkdir -p ~/bin
